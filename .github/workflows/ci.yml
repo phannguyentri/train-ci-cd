@@ -13,5 +13,5 @@ jobs:
       run: echo Hello, world!
     - name: Run a multi-line script
       run: |
-      echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
-      echo Hello, today is $TODAY
+        echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
+        echo Hello, today is $TODAY
