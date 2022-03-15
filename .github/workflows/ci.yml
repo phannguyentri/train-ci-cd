@@ -5,13 +5,12 @@ on: [push]
 jobs:
   hello:
 
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
       run: echo Hello, world!
     - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+      run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
+      run: echo Hello, today is $TODAY
